@@ -1,0 +1,83 @@
+{
+  "info": {
+    "_postman_id": "b21e8a5c-60ed-4ca7-9e29-34e61503dc44",
+    "name": "TP 1",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52623762",
+    "_collection_link": "https://go.postman.co/collection/52623762-b21e8a5c-60ed-4ca7-9e29-34e61503dc44?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Hello request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml; charset=UTF-8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <HelloRequest xmlns=\"http://learnwebservices.com/services/hello\">\r\n         <Name>Aya</Name>\r\n      </HelloRequest>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://apps.learnwebservices.com/services/hello",
+          "protocol": "https",
+          "host": [
+            "apps",
+            "learnwebservices",
+            "com"
+          ],
+          "path": [
+            "services",
+            "hello"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "error request",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "text/xml; charset=UTF-8",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <HelloRequest xmlns=\"http://learnwebservices.com/services/hello\">\r\n         <Name>Aya</Nam>\r\n      </HelloRequest>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>",
+          "options": {
+            "raw": {
+              "language": "xml"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://apps.learnwebservices.com/services/hello",
+          "protocol": "https",
+          "host": [
+            "apps",
+            "learnwebservices",
+            "com"
+          ],
+          "path": [
+            "services",
+            "hello"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
